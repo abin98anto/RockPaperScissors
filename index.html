@@ -8,7 +8,59 @@
 </head>
 <body>
     <script>
-        console.log('Hello Worlds');
+        console.log('Rock Paper Scissors');
+
+        function randomChoice()
+        {
+            let r = Math.floor(Math.random()*3);
+            let cChoice;
+            if (r == 0)
+            {
+                cChoice = 'Rock';
+            }else if (r == 1) {
+                cChoice = 'Paper';
+            }else {
+                cChoice = 'Scissors';
+            }
+            return cChoice;
+        }
+        
+        let uChoice = prompt('Enter your choice').toLowerCase();
+        let cChoice = randomChoice().toLowerCase();
+        
+        if (cChoice == 'rock')
+        {
+            if (uChoice == 'scissors')
+            {
+                console.log('You WON!');
+            } else if (uChoice == 'paper') {
+                console.log('You lost');
+            }else{
+                console.log('Tied');
+            }
+        }
+        if (cChoice == 'paper')
+        {
+            if (uChoice == 'rock')
+            {
+                console.log('You WON!');
+            } else if (uChoice == 'scissors') {
+                console.log('You lost');
+            }else{
+                console.log('Tied');
+            }
+        }
+        if (cChoice == 'scissors')
+        {
+            if (uChoice == 'paper')
+            {
+                console.log('You WON!');
+            } else if (uChoice == 'rock') {
+                console.log('You lost');
+            }else{
+                console.log('Tied');
+            }
+        }
     </script>
 </body>
 </html>
